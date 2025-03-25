@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".Registro">
+
+    <TextView
+        android:id="@+id/textCrea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/afacad"
+        android:text="Crea tu cuenta"
+        android:textColor="@color/gris"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextNombre"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edittext"
+        android:drawableStart="@drawable/user_solid"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/afacad"
+        android:hint="Nombre"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textCrea" />
+
+    <EditText
+        android:id="@+id/editTextCorreo"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext"
+        android:drawableStart="@drawable/envelope_solid"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/afacad"
+        android:hint="Correo"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextNombre" />
+
+    <EditText
+        android:id="@+id/editTextContraseña"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edittext"
+        android:drawableStart="@drawable/key_solid"
+        android:drawablePadding="8dp"
+        android:fontFamily="@font/afacad"
+        android:hint="Contraseña"
+        android:inputType="textPassword"
+        android:paddingStart="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextCorreo" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonRegistrarse"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/boton_color"
+        android:fontFamily="@font/afacad"
+        android:text="Regístrate"
+        android:textColor="@color/gris"
+        android:textSize="16sp"
+        app:backgroundTint="@color/azulF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/editTextContraseña" />
+
+    <TextView
+        android:id="@+id/textYaTienesCuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/afacad"
+        android:text="¿Ya tienes cuenta?"
+        android:textColor="#ABABAB"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/buttonRegistrarse" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/buttonIniciarSesion"
+        android:layout_width="345dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/boton_transparente"
+        android:backgroundTint="@null"
+        android:fontFamily="@font/afacad"
+        android:text="Inicia sesión"
+        android:textColor="#9EA9DD"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textYaTienesCuenta" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
