@@ -14,9 +14,9 @@ class Registro :AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_registro)
 
-        val nombre = findViewById<EditText>(R.id.editTextNombre2)
-        val correo = findViewById<EditText>(R.id.editTextCorreo2)
-        val contrasena =  findViewById<EditText>(R.id.editTextContraseña2)
+        val nombre = findViewById<EditText>(R.id.editTextNombre)
+        val correo = findViewById<EditText>(R.id.editTextCorreo)
+        val contrasena =  findViewById<EditText>(R.id.editTextContraseña)
         val confContrasena =  findViewById<EditText>(R.id.editTextConfirmarContraseña)
         val registrarse = findViewById<Button>(R.id.buttonRegistrarse)
         val iniciarSesion = findViewById<Button>(R.id.buttonIniciarSesion)
