@@ -1,21 +1,22 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/fondo_gradiente"
+    android:background="@color/white"
     tools:context=".IniciarSesion">
 
+    <!-- Bienvenida -->
     <TextView
         android:id="@+id/textBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="60dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/afacad"
         android:text="¡Bienvenido!"
-        android:textColor="@android:color/white"
+        android:textColor="@color/grisOsc"
         android:textSize="34sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,13 +24,13 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-
     <TextView
         android:id="@+id/textView1"
-        android:layout_width="179dp"
+        android:layout_width="193dp"
         android:layout_height="23dp"
+        android:fontFamily="@font/afacad"
         android:text="¿Qué deseas hacer hoy?"
-        android:textColor="#DCD4D4"
+        android:textColor="@color/grisOsc"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.191"
@@ -48,16 +49,12 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView1">
-
-
-    </LinearLayout>
-
+        app:layout_constraintTop_toBottomOf="@+id/textView1" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="386dp"
-        android:layout_height="64dp"
+        android:layout_width="380dp"
+        android:layout_height="120dp"
         android:layout_marginTop="50dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,99 +62,161 @@
 
         <HorizontalScrollView
             android:layout_width="match_parent"
-            android:layout_height="59dp"
+            android:layout_height="120dp"
             android:fillViewport="true"
             android:scrollbars="none">
 
             <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
+                android:layout_height="120dp"
                 android:orientation="horizontal">
 
-                <Button
-                    android:id="@+id/buttonAgregarMedicamentos"
+                <!-- Contenedor con ImageButton y TextView -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="#FFFCFC"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:paddingHorizontal="12dp"
-                    android:text="Agregar medicamentos"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/buttonAgregarSignos"
-                    android:layout_width="258dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="#FFFCFC"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:paddingHorizontal="12dp"
-                    android:text="Agregar signos vitales"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/buttonAgregarMedicamentos"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:fontFamily="@font/afacad"
+                        android:contentDescription="."
+                        android:background="@drawable/circular_background"
+                        android:src="@drawable/pills_solid" />
 
-                <Button
-                    android:id="@+id/buttonAgregarCitas"
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir\nmedicamentos"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/afacad"
+                        android:textColor="@color/grisOsc"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Contenedor con ImageButton y TextView -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="#FFFCFC"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:paddingHorizontal="12dp"
-                    android:text="Agregar citas médicas"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/buttonVerHistorial"
+                    <ImageButton
+                        android:id="@+id/buttonAgregarSignos"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="."
+                        android:background="@drawable/circular_background"
+                        android:src="@drawable/heart_pulse_solid" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir\nsignos vitales"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/grisOsc"
+                        android:fontFamily="@font/afacad"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Otro Contenedor con ImageButton y TextView -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
                     android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="#FFFCFC"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:paddingHorizontal="12dp"
-                    android:text="Ver historial"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    android:layout_height="wrap_content">
 
-                <Button
-                    android:id="@+id/buttonAgregarContacto"
-                    android:layout_width="400dp"
-                    android:layout_height="match_parent"
-                    android:layout_marginEnd="15dp"
-                    android:backgroundTint="#FFFCFC"
-                    android:fontFamily="sans-serif-smallcaps"
-                    android:text="Agregar contacto de emergencia"
-                    android:textColor="#020202"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
+                    <ImageButton
+                        android:id="@+id/buttonAgregarCitas"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="."
+                        android:background="@drawable/circular_background"
+                        android:src="@drawable/notes_medical_solid" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Añadir\ncitas medicas"
+                        android:layout_marginTop="8dp"
+                        android:textColor="@color/grisOsc"
+                        android:fontFamily="@font/afacad"
+                        android:textSize="12sp"
+                        android:gravity="center"/>
+                </LinearLayout>
+
+                <!-- Otro Contenedor con ImageButton y TextView -->
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/buttonAgregarContacto"
+                        android:layout_width="75dp"
+                        android:layout_height="75dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginStart="10dp"
+                        android:contentDescription="."
+                        android:background="@drawable/circular_background"
+                        android:src="@drawable/address_book_solid" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:fontFamily="@font/afacad"
+                        android:gravity="center"
+                        android:text="Añadir\ncontacto"
+                        android:textColor="@color/grisOsc"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
             </LinearLayout>
         </HorizontalScrollView>
+
     </LinearLayout>
 
-    <Button
-        android:id="@+id/buttonLlamarEmergencias"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="81dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginEnd="81dp"
-        android:backgroundTint="#FFFCFC"
-        android:fontFamily="sans-serif-smallcaps"
-        android:paddingHorizontal="12dp"
-        android:text="LLamar a emergencias"
-        android:textColor="#020202"
-        android:textSize="20sp"
-        android:textStyle="bold"
+    <ImageButton
+        android:id="@+id/imageButton3"
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_marginStart="159dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginEnd="159dp"
+        android:background="@drawable/circular_background"
+        android:contentDescription="."
+        android:fontFamily="@font/afacad"
+        android:src="@drawable/phone_solid2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="166dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="166dp"
+        android:fontFamily="@font/afacad"
+        android:gravity="center"
+        android:text="Llamar a\nemergencias"
+        android:textColor="@color/grisOsc"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

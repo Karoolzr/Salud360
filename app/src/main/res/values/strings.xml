@@ -25,4 +25,12 @@
         <item>6 Días</item>
         <item>7 Días</item>
     </string-array>
+
+    <string-array name="spinner">
+        <item>Masculino</item>
+        <item>Femenino</item>
+        <item>Otro</item>
+        <item>Prefiero no decirlo</item>
+    </string-array>
+
 </resources>
